@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Coding: html-advanced</title>
+    <style>
+        ::backdrop {
+            background-image: linear-gradient(45deg,
+                    magenta,
+                    rebeccapurple,
+                    dodgerblue,
+                    green);
+            opacity: 0.75;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Tags</h1>
+
+            <div>
+                <h2>Dialogs</h2>
+                <button id="open">Open dialog</button>
+                <dialog open id="dialog">
+                    <p>Le finestre di dialogo sono un ottimo modo per dare informazioni agli utenti</p>
+                    <button id="close">Close dialog</button>
+                </dialog>
+            </div>
+        </section>
+
+    </main>
+    <script>
+        const dialog = document.getElementById('dialog');
+        const openButton = document.getElementById('open');
+        const closeButton = document.getElementById('close');
+        openButton.addEventListener('click', function () {
+            dialog.showModal();
+        });
+        closeButton.addEventListener('click', function () {
+            dialog.close();
+        });
+    </script>
+
+</body>
+
+</html>
